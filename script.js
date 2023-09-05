@@ -25,7 +25,7 @@ function getApi() {
       console.log(" \\\\\\\\\\ this is closest log with TIME \\\\\\\\\\ ");
       console.log(data.list[0].dt);
       console.log(data.list[0].dt_txt);
-      console.log(dayjs.unix(1693893600)).format("MMM D, YYYY, hh:mm:ss a");
+      //   console.log(dayjs.unix(1693893600)).format("MMM D, YYYY, hh:mm a");
       console.log(" \\\\\\\\\\ this is 2 log \\\\\\\\\\ ");
       console.log(data.list[0]);
       console.log(" \\\\\\\\\\ this is 3 log \\\\\\\\\\ ");
@@ -36,3 +36,6 @@ function getApi() {
 }
 
 fetchButton.addEventListener("click", getApi);
+
+var APIkey = "1234567890";
+console.log("this is ", `${APIkey}`, " the key");
