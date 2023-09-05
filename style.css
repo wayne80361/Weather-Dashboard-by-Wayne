@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 1px solid red;
+}
+
+body main {
+  display: flex;
+}
+
+body h1 {
+  background-image: -webkit-linear-gradient(
+    30deg,
+    rgb(201, 255, 201),
+    rgb(254, 238, 215),
+    rgb(212, 212, 212)
+  );
+}
+
+.search-navbar {
+  min-width: 150px;
+}
+
+.weather-container {
+  display: block;
+  width: 1000px;
+  border: 3px dashed yellow;
+}
+
+#todays-weather {
+  border: 3px solid green;
+  min-height: 155px;
+}
+
+.forecast-weather-container {
+  display: flex;
+}
+.foreast-weather {
+  min-width: 200px;
+  min-height: 250px;
+}
+
+footer {
+  text-align: center;
+}
