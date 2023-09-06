@@ -24,7 +24,17 @@ function getApi() {
       console.log(data.city.name);
       today.innerHTML = `<h2><small>In </small>${data.city.name}</h2>`;
       console.log(" \\\\\\\\\\ this is closest log \\\\\\\\\\ ");
-      console.log(data.list[0]);
+      console.log(data.list[0].main.temp);
+      var tempF = document.createElement("p");
+      tempF.innerHTML = ` ${parseInt(
+        ((data.list[0].main.temp - 273.15) * 9) / 5 + 32
+      )}°F`;
+
+      var tempC = document.createElement("p");
+      tempC.innerHTML = ` ${parseInt(data.list[0].main.temp - 273.15)}°C`;
+      today.appendChild(tempF);
+      today.appendChild(tempC);
+
       console.log(" \\\\\\\\\\ this is closest log with TIME \\\\\\\\\\ ");
       console.log(data.list[0].dt);
       console.log(data.list[0].dt_txt);
