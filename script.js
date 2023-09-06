@@ -60,11 +60,11 @@ function getApi() {
       var day1 = document.getElementById("day1");
       var timeInText = data.list[10].dt_txt;
       var dateOnly1 = timeInText.substr(0, 10);
-      var date1 = document.createElement("p");
-      date1.classList.add("date");
+      // var date1 = document.createElement("p");
+      // day1.classList.add("date");
       day1.classList.add("show");
-      date1.innerHTML = `<strong>${dateOnly1}</strong>`;
-      day1.appendChild(date1);
+      day1.innerHTML = `<p class="date"><strong>${dateOnly1}</strong></p>`;
+      // day1.appendChild(day1);
 
       // --- temp  F
       var tempF = document.createElement("p");
@@ -93,11 +93,11 @@ function getApi() {
       var day2 = document.getElementById("day2");
       var timeInText = data.list[18].dt_txt;
       var dateOnly2 = timeInText.substr(0, 10);
-      var date2 = document.createElement("p");
-      date2.classList.add("date");
+      // var date2 = document.createElement("p");
+      // date2.classList.add("date");
       day2.classList.add("show");
-      date2.innerHTML = `<strong>${dateOnly2}</strong>`;
-      day2.appendChild(date2);
+      day2.innerHTML = `<p class="date"><strong>${dateOnly2}</strong></p>`;
+      // day2.appendChild(date2);
 
       // --- temp  F
       var tempF = document.createElement("p");
@@ -125,11 +125,11 @@ function getApi() {
       var day3 = document.getElementById("day3");
       var timeInText = data.list[26].dt_txt;
       var dateOnly3 = timeInText.substr(0, 10);
-      var date3 = document.createElement("p");
-      date3.classList.add("date");
+      // var date3 = document.createElement("p");
+      // date3.classList.add("date");
       day3.classList.add("show");
-      date3.innerHTML = `<strong>${dateOnly3}</strong>`;
-      day3.appendChild(date3);
+      day3.innerHTML = `<p class="date"><strong>${dateOnly3}</strong></p>`;
+      // day3.appendChild(date3);
 
       // --- temp  F
       var tempF = document.createElement("p");
@@ -158,11 +158,11 @@ function getApi() {
       var day4 = document.getElementById("day4");
       var timeInText = data.list[34].dt_txt;
       var dateOnly4 = timeInText.substr(0, 10);
-      var date4 = document.createElement("p");
-      date4.classList.add("date");
+      // var date4 = document.createElement("p");
+      // date4.classList.add("date");
       day4.classList.add("show");
-      date4.innerHTML = `<strong>${dateOnly4}</strong>`;
-      day4.appendChild(date4);
+      day4.innerHTML = `<p class="date"><strong>${dateOnly4}</strong></p>`;
+      // day4.appendChild(date4);
 
       // --- temp  F
       var tempF = document.createElement("p");
@@ -191,11 +191,11 @@ function getApi() {
       var timeInText = data.list[39].dt_txt;
       var dateOnly5 = timeInText.substr(0, 10);
 
-      var date5 = document.createElement("p");
-      date5.classList.add("date");
+      // var date5 = document.createElement("p");
+      // date5.classList.add("date");
       day5.classList.add("show");
-      date5.innerHTML = `<strong>${dateOnly5}</strong>`;
-      day5.appendChild(date5);
+      day5.innerHTML = `<p class="date"><strong>${dateOnly5}</strong></p>`;
+      // day5.appendChild(date5);
 
       // --- temp  F
       var tempF = document.createElement("p");
