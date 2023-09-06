@@ -1,10 +1,10 @@
-var repoList = document.querySelector("ul");
-var fetchButton = document.getElementById("fetch-button");
+var weather = document.getElementById("day1");
+var searchButton = document.getElementById("search-button");
 
 function getApi() {
-  // replace `octocat` with anyone else's GitHub username
-  var requestUrl =
-    "https://api.openweathermap.org/data/2.5/forecast?lat=44.34&lon=10.99&appid=65f56530c5f9bdea6f890b62a4e12ea8";
+  var APIkey = "65f56530c5f9bdea6f890b62a4e12ea8";
+
+  var requestUrl = `https://api.openweathermap.org/data/2.5/forecast?q=London&appid=${APIkey}`;
 
   fetch(requestUrl)
     .then(function (response) {
@@ -18,8 +18,11 @@ function getApi() {
       }
       console.log(" \\\\\\\\\\ this is whole log \\\\\\\\\\ ");
       console.log(data);
+
+      var today = document.getElementById("todays-weather");
       console.log(" \\\\\\\\\\ this is City Name log \\\\\\\\\\ ");
       console.log(data.city.name);
+      today.innerHTML = `<h2><small>In </small>${data.city.name}</h2>`;
       console.log(" \\\\\\\\\\ this is closest log \\\\\\\\\\ ");
       console.log(data.list[0]);
       console.log(" \\\\\\\\\\ this is closest log with TIME \\\\\\\\\\ ");
@@ -35,7 +38,7 @@ function getApi() {
     });
 }
 
-fetchButton.addEventListener("click", getApi);
+searchButton.addEventListener("click", getApi);
 
 var APIkey = "1234567890";
 console.log("this is ", `${APIkey}`, " the key");
