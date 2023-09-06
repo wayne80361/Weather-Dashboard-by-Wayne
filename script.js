@@ -4,7 +4,10 @@ var searchButton = document.getElementById("search-button");
 function getApi() {
   var APIkey = "65f56530c5f9bdea6f890b62a4e12ea8";
 
-  var requestUrl = `https://api.openweathermap.org/data/2.5/forecast?q=London&cnt&appid=${APIkey}`;
+  var city = document.querySelector(".search-navbar input").value;
+  var requestUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&cnt&appid=${APIkey}`;
+
+  if (city === "") return;
 
   fetch(requestUrl)
     .then(function (response) {
