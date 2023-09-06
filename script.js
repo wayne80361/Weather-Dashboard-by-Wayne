@@ -25,7 +25,7 @@ function getApi() {
       var today = document.getElementById("todays-weather");
       // console.log(" \\\\\\\\\\ this is City Name log \\\\\\\\\\ ");
       // console.log(data.city.name);
-      today.innerHTML = `<h2><small>In </small>${data.city.name}</h2>`;
+      today.innerHTML = `<h2><small> Currently in </small>${data.city.name}</h2>`;
       // console.log(" \\\\\\\\\\ this is closest time log \\\\\\\\\\ ");
       // console.log(data.list[0].main.temp);
       var tempF = document.createElement("p");
@@ -62,6 +62,7 @@ function getApi() {
       var dateOnly1 = timeInText.substr(0, 10);
       var date1 = document.createElement("p");
       date1.classList.add("date");
+      day1.classList.add("show");
       date1.innerHTML = `<strong>${dateOnly1}</strong>`;
       day1.appendChild(date1);
 
@@ -94,6 +95,7 @@ function getApi() {
       var dateOnly2 = timeInText.substr(0, 10);
       var date2 = document.createElement("p");
       date2.classList.add("date");
+      day2.classList.add("show");
       date2.innerHTML = `<strong>${dateOnly2}</strong>`;
       day2.appendChild(date2);
 
@@ -125,6 +127,7 @@ function getApi() {
       var dateOnly3 = timeInText.substr(0, 10);
       var date3 = document.createElement("p");
       date3.classList.add("date");
+      day3.classList.add("show");
       date3.innerHTML = `<strong>${dateOnly3}</strong>`;
       day3.appendChild(date3);
 
@@ -157,6 +160,7 @@ function getApi() {
       var dateOnly4 = timeInText.substr(0, 10);
       var date4 = document.createElement("p");
       date4.classList.add("date");
+      day4.classList.add("show");
       date4.innerHTML = `<strong>${dateOnly4}</strong>`;
       day4.appendChild(date4);
 
@@ -189,6 +193,7 @@ function getApi() {
 
       var date5 = document.createElement("p");
       date5.classList.add("date");
+      day5.classList.add("show");
       date5.innerHTML = `<strong>${dateOnly5}</strong>`;
       day5.appendChild(date5);
 
