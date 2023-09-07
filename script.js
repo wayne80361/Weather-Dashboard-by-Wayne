@@ -272,11 +272,9 @@ function generateWeatherIcon() {
     .then(function (data) {
       // localStorage.setItem("searchHistory", city);
       // console.log(data.weather[0].icon);
-      var today = document.getElementById("todays-weather");
+
       var iconToday = document.querySelector("#icon");
-      var icon = document.createElement("p");
-      // var iconNumber = data.weather[0].icon;
-      iconToday.textContent = data.weather[0].icon;
-      console.log(icon);
+      var iconNumber = data.weather[0].icon;
+      iconToday.innerHTML = `<img src="./Assets/${iconNumber}@2x.png" alt="weather icon" />`;
     });
 }
