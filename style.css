@@ -43,11 +43,15 @@ body h1 {
   display: flex;
 }
 .forecast-weather {
+  position: relative;
+  bottom: 165px;
   min-width: 200px;
   min-height: 250px;
   margin: 2px;
   padding: 5px;
-  border: solid saddlebrown 1px;
+  border: solid saddlebrown 3px;
+  border-radius: 25px 50px;
+  box-shadow: 0 0 5px lightblue;
 }
 
 footer {
