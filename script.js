@@ -29,6 +29,7 @@ function getApi() {
 
       var historyButton = document.createElement("button");
       historyButton.innerHTML = city;
+      historyButton.classList.add("history-button");
       historyContainer.append(historyButton);
 
       // var listItem = document.createElement("li");
@@ -249,6 +250,7 @@ function readLocalStorage() {
     // localStorage.setItem("searchHistory", history);
     // var appendItem = document.createElement("button");
     historyButton.innerHTML = savedInfo;
+    historyButton.classList.add("history-button");
     historyContainer.appendChild(historyButton);
   }
 }
