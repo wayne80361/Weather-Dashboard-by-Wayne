@@ -46,21 +46,24 @@ function getApi() {
       // console.log(" \\\\\\\\\\ this is closest time log \\\\\\\\\\ ");
       // console.log(data.list[0].main.temp);
       var tempF = document.createElement("p");
-      tempF.innerHTML = ` ${parseInt(
+      tempF.innerHTML = `Temp: ${parseInt(
         ((data.list[0].main.temp - 273.15) * 9) / 5 + 32
       )}°F`;
 
       var tempC = document.createElement("p");
-      tempC.innerHTML = ` ${parseInt(data.list[0].main.temp - 273.15)}°C`;
+      tempC.innerHTML = `Temp: ${parseInt(data.list[0].main.temp - 273.15)}°C`;
       today.appendChild(tempF);
       today.appendChild(tempC);
 
       var humidity = document.createElement("p");
-      humidity.innerHTML = data.list[0].main.humidity + "%";
+      humidity.innerHTML = "Humidity: " + data.list[0].main.humidity + "%";
       today.appendChild(humidity);
 
       var wind = document.createElement("p");
-      wind.innerHTML = (data.list[0].wind.speed * 0.621371).toFixed(2) + " mph";
+      wind.innerHTML =
+        "Wind Speed: " +
+        (data.list[0].wind.speed * 0.621371).toFixed(2) +
+        " mph";
       today.appendChild(wind);
 
       console.log(" \\\\\\\\\\ this is closest log with TIME \\\\\\\\\\ ");
