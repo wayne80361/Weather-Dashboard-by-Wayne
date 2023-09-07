@@ -98,12 +98,14 @@ function getApi() {
       day1.appendChild(tempC);
       // --- humidity
       var humidity = document.createElement("p");
-      humidity.innerHTML = data.list[10].main.humidity + "%";
+      humidity.innerHTML = "Humidity: " + data.list[10].main.humidity + "%";
       day1.appendChild(humidity);
       // --- wind speed
       var wind = document.createElement("p");
       wind.innerHTML =
-        (data.list[10].wind.speed * 0.621371).toFixed(2) + " mph";
+        "Wind Speed: " +
+        (data.list[10].wind.speed * 0.621371).toFixed(2) +
+        " mph";
       day1.appendChild(wind);
 
       // 3rd day log ------------------------------------------------
@@ -131,12 +133,14 @@ function getApi() {
       day2.appendChild(tempC);
       // --- humidity
       var humidity = document.createElement("p");
-      humidity.innerHTML = data.list[18].main.humidity + "%";
+      humidity.innerHTML = "Humidity: " + data.list[18].main.humidity + "%";
       day2.appendChild(humidity);
       // --- wind speed
       var wind = document.createElement("p");
       wind.innerHTML =
-        (data.list[18].wind.speed * 0.621371).toFixed(2) + " mph";
+        "Wind Speed: " +
+        (data.list[18].wind.speed * 0.621371).toFixed(2) +
+        " mph";
       day2.appendChild(wind);
       // 4th day log ------------------------------------------------
       console.log(" \\\\\\\\\\ this is 4th day log \\\\\\\\\\ ");
@@ -163,12 +167,14 @@ function getApi() {
       day3.appendChild(tempC);
       // --- humidity
       var humidity = document.createElement("p");
-      humidity.innerHTML = data.list[26].main.humidity + "%";
+      humidity.innerHTML = "Humidity: " + data.list[26].main.humidity + "%";
       day3.appendChild(humidity);
       // --- wind speed
       var wind = document.createElement("p");
       wind.innerHTML =
-        (data.list[26].wind.speed * 0.621371).toFixed(2) + " mph";
+        "Wind Speed: " +
+        (data.list[26].wind.speed * 0.621371).toFixed(2) +
+        " mph";
       day3.appendChild(wind);
 
       // 5th day log ------------------------------------------------
@@ -196,12 +202,14 @@ function getApi() {
       day4.appendChild(tempC);
       // --- humidity
       var humidity = document.createElement("p");
-      humidity.innerHTML = data.list[34].main.humidity + "%";
+      humidity.innerHTML = "Humidity: " + data.list[34].main.humidity + "%";
       day4.appendChild(humidity);
       // --- wind speed
       var wind = document.createElement("p");
       wind.innerHTML =
-        (data.list[34].wind.speed * 0.621371).toFixed(2) + " mph";
+        "Wind Speed: " +
+        (data.list[34].wind.speed * 0.621371).toFixed(2) +
+        " mph";
       day4.appendChild(wind);
 
       // 6th day log ------------------------------------------------
@@ -229,12 +237,14 @@ function getApi() {
       day5.appendChild(tempC);
       // --- humidity
       var humidity = document.createElement("p");
-      humidity.innerHTML = data.list[39].main.humidity + "%";
+      humidity.innerHTML = "Humidity: " + data.list[39].main.humidity + "%";
       day5.appendChild(humidity);
       // --- wind speed
       var wind = document.createElement("p");
       wind.innerHTML =
-        (data.list[39].wind.speed * 0.621371).toFixed(2) + " mph";
+        "Wind Speed: " +
+        (data.list[39].wind.speed * 0.621371).toFixed(2) +
+        " mph";
       day5.appendChild(wind);
     });
 
