@@ -1,5 +1,6 @@
 var weather = document.getElementById("day1");
 var searchButton = document.getElementById("search-button");
+var historyContainer = document.getElementById("history-container");
 
 function getApi() {
   var APIkey = "65f56530c5f9bdea6f890b62a4e12ea8";
@@ -11,14 +12,29 @@ function getApi() {
 
   fetch(requestUrl)
     .then(function (response) {
-      return response.json();
+      if (response.ok) {
+        return response.json();
+      } else {
+        alert("Please make sure the City name is correct");
+      }
     })
     .then(function (data) {
-      for (var i = 0; i < data.length; i++) {
-        // var listItem = document.createElement("li");
-        // listItem.textContent = data[i].html_url;
-        // repoList.appendChild(listItem);
+      // localStorage.getItem("searchHistory");
+
+      localStorage.setItem("searchHistory", city);
+      // for (var i = 0; i < data.length; i++)
+      {
       }
+      var historyContainer = document.getElementById("history-container");
+
+      var historyButton = document.createElement("button");
+      historyButton.innerHTML = city;
+      historyContainer.append(historyButton);
+
+      // var listItem = document.createElement("li");
+      // listItem.textContent = data[i].html_url;
+      // repoList.appendChild(listItem);
+
       console.log(" \\\\\\\\\\ this is whole log \\\\\\\\\\ ");
       console.log(data);
 
@@ -217,6 +233,25 @@ function getApi() {
         (data.list[39].wind.speed * 0.621371).toFixed(2) + " mph";
       day5.appendChild(wind);
     });
+
+  // Save search item into local storage
+  // if (response.ok) {
+  //   localStorage.setItem("searchHistory", city);
+  // } else return;
+}
+
+function readLocalStorage() {
+  var savedInfo = localStorage.getItem("searchHistory") || [];
+  if (savedInfo !== null) {
+    var historyContainer = document.getElementById("history-container");
+    var historyButton = document.createElement("button");
+
+    // localStorage.setItem("searchHistory", history);
+    // var appendItem = document.createElement("button");
+    historyButton.innerHTML = savedInfo;
+    historyContainer.appendChild(historyButton);
+  }
 }
 
 searchButton.addEventListener("click", getApi);
+readLocalStorage();
