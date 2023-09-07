@@ -239,6 +239,7 @@ function getApi() {
   // if (response.ok) {
   //   localStorage.setItem("searchHistory", city);
   // } else return;
+  generateWeatherIcon();
 }
 
 function readLocalStorage() {
@@ -257,3 +258,25 @@ function readLocalStorage() {
 
 searchButton.addEventListener("click", getApi);
 readLocalStorage();
+
+function generateWeatherIcon() {
+  var city = document.querySelector(".search-navbar input").value;
+  var weatherIconUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=65f56530c5f9bdea6f890b62a4e12ea8`;
+
+  if (city === "") return;
+
+  fetch(weatherIconUrl)
+    .then(function (response) {
+      if (response.ok) return response.json();
+    })
+    .then(function (data) {
+      // localStorage.setItem("searchHistory", city);
+      // console.log(data.weather[0].icon);
+      var today = document.getElementById("todays-weather");
+      var iconToday = document.querySelector("#icon");
+      var icon = document.createElement("p");
+      // var iconNumber = data.weather[0].icon;
+      iconToday.textContent = data.weather[0].icon;
+      console.log(icon);
+    });
+}
