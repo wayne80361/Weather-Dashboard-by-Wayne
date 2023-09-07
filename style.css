@@ -76,6 +76,13 @@ footer {
 .history-button {
   justify-content: center;
   margin: 4px;
+  border-radius: 5px;
+  height: 30px;
+  font-size: 16px;
+}
+
+.history-button:hover {
+  box-shadow: 0 0 10px rgb(146, 146, 206);
 }
 
 img {
