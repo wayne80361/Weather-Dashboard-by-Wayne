@@ -31,6 +31,12 @@ body h1 {
 #todays-weather {
   /* border: 3px solid green; */
   min-height: 155px;
+  max-width: 300px;
+  padding: 15px;
+}
+
+#todays-weather p {
+  padding: 3px;
 }
 
 .forecast-weather-container {
@@ -70,4 +76,12 @@ footer {
 .history-button {
   justify-content: center;
   margin: 4px;
+}
+
+img {
+  position: relative;
+  bottom: 250px;
+  left: 302px;
+  height: 150px;
+  width: 150px;
 }
